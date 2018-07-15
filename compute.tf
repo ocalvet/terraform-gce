@@ -1,12 +1,12 @@
 # Create a new instance
-resource "google_compute_instance" "ubuntu-xenial" {
-  name         = "ubuntu-xenial"
+resource "google_compute_instance" "srv1" {
+  name         = "srv1"
   machine_type = "f1-micro"
-  zone         = "us-east-d"
+  zone         = "us-east1-d"
 
   boot_disk {
     initialize_params {
-      image = "ubuntu-1604-lts"
+      image = "centos-7"
     }
   }
 
