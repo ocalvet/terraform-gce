@@ -25,11 +25,11 @@ resource "google_compute_instance" "srv1" {
       "sudo systemctl start nginx",
     ]
 
-    connection {
-      type        = "ssh"
-      user        = "ubuntu"
-      private_key = "${file("~/.ssh/google_compute_engine")}"
-    }
+    # connection {
+    #   type        = "ssh"
+    #   user        = "ubuntu"
+    #   private_key = "${file("~/.ssh/google_compute_engine")}"
+    # }
   }
 
   service_account {
